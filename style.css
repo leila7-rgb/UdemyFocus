@@ -1,0 +1,494 @@
+/* rest general */
+* {
+    margin: 0;              /* Supprime les marges par défaut */
+    padding: 0;             /* Supprime les espacements internes */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions */
+    font-family: Arial, sans-serif; /* Définit la police du site */
+}
+
+body {
+    background: white; /* Couleur de fond de la page */
+}
+/*header*/
+header {
+    background: white; /* Fond du header */
+    display: flex; /* Place les éléments sur une même ligne */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Alignement vertical */
+    padding: 15px 40px; /* Espacement interne */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Ombre légère */
+}
+
+.logo img {
+    width: 130px; /* Largeur du logo */
+}
+
+nav ul {
+    display: flex; /* Affichage horizontal du menu */
+    list-style: none; /* Supprime les puces */
+    gap: 20px; /* Espace entre les liens */
+    align-items: center; /* Alignement vertical */
+}
+
+nav a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: black; /* Couleur du texte */
+}
+
+nav a:hover {
+    color: #a435f0; /* Couleur au survol */
+}
+/* Search bar */
+.search-bar input {
+    width: 400px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Authentication buttons */
+.auth button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+/* Style spécifique pour le bouton "Se connecter" */
+.auth button:last-child {
+    background: black;
+    color: white;
+}
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg,#a435f0,#6d28d9);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+/* Courses section */
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+/* Courses section */
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* Courses section */
+.hero button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    background: white;
+}
+/* Courses section */
+.courses {
+    padding: 50px;
+    text-align: center;
+}
+/* Courses section */
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+/* Courses section */
+.course-card {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+/* Courses section */
+.course-card:hover {
+    transform: translateY(-5px);
+}
+/* Courses section */
+.course-card a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #a435f0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Footer section */
+
+footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    margin-top: 50px;
+}
+/* Footer section */
+.footer-left img {
+    width: 90px;
+}
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+/* Style pour le menu déroulant */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+}
+/* Style pour les éléments de la liste dans le menu déroulant */
+.dropdown-menu li {
+    padding: 12px;
+}
+/* Style pour les liens dans le menu déroulant */
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+/* Style pour le survol des éléments de la liste dans le menu déroulant */
+.dropdown-menu li:hover {
+    background: white;
+}
+/* Affiche le menu déroulant au survol */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Style pour le menu déroulant "Enseigner" */
+.dropdown-box-enseigner {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); 
+    background: white;
+    width: 320px;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    text-align: center;
+}
+/* Affiche le menu déroulant "Enseigner" au survol */
+.dropdown:hover .dropdown-box-enseigner {
+    display: block;
+}
+/* Style pour le titre dans le menu déroulant "Enseigner" */
+.dropdown-box-enseigner p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Style pour le bouton "Savoir plus" dans le menu déroulant "Enseigner" */
+.btn-savoir-plus {
+    background-color: #a435f0;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+/* Style pour le survol du bouton "Savoir plus" dans le menu déroulant "Enseigner" */
+.btn-savoir-plus:hover {
+    background-color: #871ed1;
+}
+/* Style pour le menu déroulant "Contact" */
+.dropdown-box-contact {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    text-align: left; 
+}
+/* Affiche le menu déroulant "Contact" au survol */
+.dropdown:hover .dropdown-box-contact {
+    display: block;
+}
+/* Style pour le titre dans le menu déroulant "Contact" */
+.dropdown-box-contact h3 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+/* Style pour les champs de saisie dans le menu déroulant "Contact" */
+.dropdown-box-contact input,
+/* Style pour les zones de texte dans le menu déroulant "Contact" */
+.dropdown-box-contact textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #8a8d91;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+/* Style pour le focus sur les champs de saisie et les zones de texte dans le menu déroulant "Contact" */
+.dropdown-box-contact input:focus,
+.dropdown-box-contact textarea:focus {
+    border-color: #a435f0;
+}
+/* Style pour le bouton "Envoyer" dans le menu déroulant "Contact" */
+.btn-contact-submit {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+/* Style pour le survol du bouton "Envoyer" dans le menu déroulant "Contact" */
+.btn-contact-submit:hover {
+    background-color: #a435f0; 
+}
+/* Style pour les informations rapides dans le menu déroulant "Contact" */
+.quick-info {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed white;
+}
+/* Style pour les paragraphes dans les informations rapides du menu déroulant "Contact" */
+.quick-info p {
+    font-size: 12px;
+    color: #6a6f73;
+    margin-bottom: 5px;
+}
+/* Style pour les liens dans les informations rapides du menu déroulant "Contact" */
+.auth-modal {
+    display: none; 
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(4px); 
+}
+/* Style pour le contenu de la modale d'authentification */
+.auth-modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 35px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+/* Style pour le titre dans la modale d'authentification */
+.auth-modal-content h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 5px;
+}
+/* Style pour le paragraphe dans la modale d'authentification */
+.auth-modal-content p {
+    font-size: 14px;
+    color: #6a6f73;
+    margin-bottom: 25px;
+}
+/* Style pour les groupes de champs dans la modale d'authentification */
+.auth-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+/* Style pour les labels dans les groupes de champs de la modale d'authentification */
+.auth-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black;
+}
+/* Style pour les champs de saisie dans les groupes de champs de la modale d'authentification */
+.auth-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+/* Style pour le focus sur les champs de saisie dans les groupes de champs de la modale d'authentification */
+.auth-group input:focus {
+    border-color: #a435f0;
+}
+/* Submit Button */
+.btn-auth-submit {
+    background: #a435f0;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+/* Style pour le survol du bouton de soumission dans la modale d'authentification */
+.btn-auth-submit:hover {
+    background: #871ed1;
+}
+/* Style pour le bouton de fermeture dans la modale d'authentification */
+.close-auth {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6a6f73;
+    cursor: pointer;
+}
+/* Style pour le survol du bouton de fermeture dans la modale d'authentification */
+.close-auth:hover {
+    color: black;
+}
+/* Style pour les liens dans la modale d'authentification */
+.hidden {
+  display: none;
+}
+/* Style pour les formulaires */
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+/* Style pour le focus sur les champs de saisie et les zones de texte dans les formulaires */
+form input:focus, form textarea:focus {
+  border-color: #be2ba3;
+  outline: none;
+}
+/* Style pour les boutons dans les formulaires */
+form button {
+  background-color: #b024a9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Style pour le survol des boutons dans les formulaires */
+form button:hover {
+  background-color: #a51f7d;
+}
+/* Style pour le formulaire d'envoi */
+#envoyer {
+  max-width: 500px;
+  margin: 40px auto; 
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Style pour le titre du formulaire d'envoi */
+.auth-modal-content {
+  animation: fadeIn 0.3s ease;
+}
+/* Animation pour l'apparition de la modale d'authentification */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* Responsive Design */
+@media (max-width:768px) {
+  .search-bar input {
+    width: 100%;
+  }
+  .hero h1 { font-size: 32px; }
+  .course-card { width: 100%; }
+}
+/* Slider styles */
+.slider{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+}
+/* Slider container */
+.slider-container {
+  display: flex;
+  overflow-x: hidden; 
+  scroll-behavior: smooth;
+}
+/* Individual course cards */
+.course-card{
+    min-width:20%;
+    padding:15px;
+    margin:10px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+/* Navigation buttons */
+.prev,
+.next{
+    position:absolute;
+    top:40%;
+    z-index:10;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    cursor:pointer;
+    font-size:25px;
+}
+/* Positioning for navigation buttons */
+.prev{
+    left:0;
+}
+/* Positioning for navigation buttons */
+.next{
+    right:0;
+}
+
