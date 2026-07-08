@@ -100,15 +100,5 @@ document.querySelectorAll(".slider").forEach(sliderWrapper => {
   });
 });
 
-function ouvrirCours(titre, lien) {
-    document.getElementById("courseTitle").innerText = titre;
-    document.getElementById("videoFrame").src = lien;
-    document.getElementById("video-course").style.display = "block";
-    document.querySelector(".courses").style.display = "none";
-}
 
-function fermerCours() {
-    document.getElementById("video-course").style.display = "none";
-    document.querySelector(".courses").style.display = "block";
-    document.getElementById("videoFrame").src = "";
-}
+
