@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// 1. Connexion à la Base de Données
 $db_server   = "localhost";
 $db_username = "root";
 $db_password = "";
@@ -12,7 +11,7 @@ if ($conn->connect_error) {
     die("Erreur connexion: " . $conn->connect_error);
 }
 $conn->set_charset("utf8mb4");
-// 2. Traitement du Formulaire CONTACT
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_contact'])) {
     $nom   = htmlspecialchars(trim($_POST['nom']));
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -29,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_contact'])) {
     }
 }
 
-// 3. Traitement du Formulaire SIGN UP (Inscription)
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_signup'])) {
     $nom      = htmlspecialchars(trim($_POST['nom_complet']));
     $email    = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
@@ -58,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_signup'])) {
 }
 
 
-// 4. Traitement du Formulaire LOGIN (Connexion)
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_login'])) {
     $email    = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $password = trim($_POST['password']);
@@ -84,7 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action_login'])) {
     }
 }
 
-// 5. Traitement du LOGOUT (Déconnexion)
 if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: index.php");
